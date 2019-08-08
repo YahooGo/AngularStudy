@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../interfaces/hero';
 import { HEROES } from '../mock-heroes';
 
+
 // 装饰器
 @Component({
   selector: 'app-heroes', // 组建选择器 - 识别组建 - 自定义组件标签
@@ -12,18 +13,22 @@ import { HEROES } from '../mock-heroes';
 export class HeroesComponent implements OnInit {
 
   // 声明变量
-  public hero: Hero = {
-    id: 1,
-    name: `超级英雄`
-  };
 
-  public heroes: Hero[] = HEROES;
+  heroes: Hero[] = HEROES;
+  
+  selectedHero: Hero;
 
-  public username = `我是超级英雄`;
+  onSelect(hero: Hero): void {
+    console.log(hero);
+    this.selectedHero = hero;
+  }
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
+    console.log(this.heroes);
   }
 
 }
