@@ -8,3 +8,10 @@
         <input type="text" [(ngModel)]="username">
     </label>
 </div>
+
+<h2>MyHeroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <span class="badge">{{hero.id}}---{{hero.name}}</span>
+    </li>
+</ul>

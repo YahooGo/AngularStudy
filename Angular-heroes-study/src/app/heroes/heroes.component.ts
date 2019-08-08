@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../interfaces/hero';
-
+import { HEROES } from '../mock-heroes';
 
 // 装饰器
 @Component({
@@ -12,12 +12,14 @@ import { Hero } from '../interfaces/hero';
 export class HeroesComponent implements OnInit {
 
   // 声明变量
-  hero: Hero = {
+  public hero: Hero = {
     id: 1,
     name: `超级英雄`
   };
 
-  username = `我是超级英雄`;
+  public heroes: Hero[] = HEROES;
+
+  public username = `我是超级英雄`;
 
   constructor() { }
 
