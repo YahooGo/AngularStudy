@@ -28,7 +28,7 @@ export class HeroesComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.heroes);
+    // console.log('模拟的数据', this.heroes);
   }
 
 }

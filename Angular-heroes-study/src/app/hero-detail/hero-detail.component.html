@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+
+    <h2>
+        <span>Id:</span>{{hero.id}}
+        <!-- | 管道操作符 过滤数据 -->
+        <span>Name: {{hero.name | uppercase}}</span>
+    </h2>
+    <div>
+        <label for="">name: 
+            <input 
+                type="text" 
+                [(ngModel)]="hero.name" 
+                placeholder="name">
+        </label>
+    </div>
+</div>

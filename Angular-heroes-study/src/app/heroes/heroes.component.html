@@ -1,7 +1,7 @@
 <div>
     <h2>MyHeroes</h2>
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
     <ul class="heroes">
-
         <li 
             *ngFor="let hero of heroes" 
             (click)="onSelect(hero)" 
@@ -16,32 +16,3 @@
         </li>
     </ul>
 </div>
-
-<div *ngIf="selectedHero">
-
-    <h2>
-        <span>Id:</span>{{selectedHero.id}}
-        <!-- | 管道操作符 过滤数据 -->
-        <span>Name: {{selectedHero.name | uppercase}}</span>
-    </h2>
-    <div>
-        <label for="">name: 
-            <input 
-                type="text" 
-                [(ngModel)]="selectedHero.name" 
-                placeholder="name">
-        </label>
-    </div>
-</div>
-
-
-
-<!-- 
-<h2>My Heroes</h2>
-<ul class=heroes>
-    <li *ngFor="let hero of heroes">
-        <span>{{hero.id}}</span>
-        <span>{{hero.name}}</span>
-    </li>
-</ul> -->
-
