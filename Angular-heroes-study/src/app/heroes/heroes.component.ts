@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../interfaces/hero';
 import { HEROES } from '../mock-heroes';
-
+import { HeroService } from '../service/hero.service';
 
 // 装饰器
 @Component({
@@ -14,21 +14,27 @@ export class HeroesComponent implements OnInit {
 
   // 声明变量
 
-  heroes: Hero[] = HEROES;
+  heroes: Hero[];
   
   selectedHero: Hero;
 
-  onSelect(hero: Hero): void {
-    console.log(hero);
-    this.selectedHero = hero;
-  }
-
-  constructor() {
+  constructor(private heroService: HeroService) {
 
   }
 
   ngOnInit() {
     // console.log('模拟的数据', this.heroes);
+    this.getHeroes();
+  }
+
+  getHeroes() {
+    this.heroService.getHeroes()
+    .subscribe(heroes => this.heroes = heroes);
+  }
+
+  onSelect(hero: Hero): void {
+    console.log(hero);
+    this.selectedHero = hero;
   }
 
 }
