@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Hero} from '../interfaces/hero';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { HeroService } from '../service/hero.service'
+
+
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -11,9 +16,24 @@ export class HeroDetailComponent implements OnInit {
   // @Input 修饰符用于接收组件传入的属性数据 =》【】属性绑定
   // 这是一种单向数据绑定
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private heroService: HeroService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
+    this.getHero();
+  }
+
+  getHero(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.heroService.getHero(id)
+    .subscribe(hero => this.hero = hero);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
