@@ -13,12 +13,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 // 根组件
 import { AppComponent } from './app.component';
+import { NewsComponent } from './components/news/news.component';
 /**
  * @ngModule装饰器 接受一个元数据，告诉angular如何启动应用
  */
 @NgModule({
   declarations: [ /* 配置当前项目运行的组件 */
-    AppComponent
+    AppComponent, NewsComponent
   ],
   imports: [ /* 配置当前模块依赖其他模块 */ 
     BrowserModule,
