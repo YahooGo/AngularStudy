@@ -51,6 +51,6 @@ export class HomeComponent implements OnInit {
   }
 
   setkeyWords() {
-    this.keyWords = `asdasds`
+    this.keyWords = `asdasds`;
   }
 }
