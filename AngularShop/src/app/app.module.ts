@@ -14,16 +14,23 @@ import { AppRoutingModule } from './app-routing.module';
 // 根组件
 import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
+import { HomeComponent } from './components/home/home.component';
+/**
+ *  form 模块
+ */
+  import {FormsModule} from '@angular/forms';
+
 /**
  * @ngModule装饰器 接受一个元数据，告诉angular如何启动应用
  */
 @NgModule({
   declarations: [ /* 配置当前项目运行的组件 */
-    AppComponent, NewsComponent
+    AppComponent, NewsComponent, HomeComponent
   ],
   imports: [ /* 配置当前模块依赖其他模块 */ 
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [], /* 配置项目依赖服务 */
   bootstrap: [AppComponent] /* 指定应用的主视图，通过引导根AppModule来启动应用 */

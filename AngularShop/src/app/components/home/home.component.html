@@ -1,0 +1,70 @@
+<p>home works!</p>
+<h1>引入图片</h1>
+<img src="assets/images/index.png" alt="" style="width: 300px;">
+<img [src]="imgUrl" alt="">
+<h1>循环外加key，index</h1>
+<ul>
+    <li *ngFor="let item of lists;let key = index;">
+        {{key}} --- {{item.title}}
+    </li>
+</ul>
+
+<h1>条件判断语句</h1>
+
+<div *ngIf="flag">
+    <img [src]="imgUrl" alt="">
+</div>
+<div *ngIf="!flag">
+    <img src="assets/images/index.png" alt="111">
+</div>
+<h1>条件判断</h1>
+<span [ngSwitch]="orderStatus">
+<p *ngSwitchCase="1">
+    表示已经支付
+</p>
+<p *ngSwitchCase="2">
+    支付并确认订单
+</p>
+<p *ngSwitchCase="3">
+    表示已经发货
+</p>
+<p *ngSwitchCase="4">
+    表示已经收货
+</p>
+<p *ngSwitchDefault>
+    表示已经发货
+</p>
+</span>
+
+<h1>属性[ngClass],[ngStyle]</h1>
+
+<div [ngClass]="{'red': true}"></div>
+<div [ngClass]="{'blue': true, 'red': true}"></div>
+<div [ngClass]="{'orange': flag, 'red': !flag}"></div>
+
+<p style="color: red">我是一个p标签</p>
+<p [ngStyle]="{'color': 'red'}">我是一个p标签</p>
+
+<h1>管道</h1>
+<p>{{today| json}}</p>
+<p>{{today| date:'yyyy-MM-dd HH:mm:ss'}}</p>
+<h1>事件</h1>
+<!-- 注意绑定函数是必须有`()` -->
+<button (click)="run()">执行事件</button>
+<button (click)="getData()">执行事件</button>
+<button (click)="setData()">设置title</button>
+<p>{{title}}</p>
+<h1>表单事件</h1>
+
+<input type="text" (keydown)="keyDown($event)">
+
+<h1>双向数据绑定 --- MVVM</h1>
+
+<input type="text" [(ngModel)]="keyWords"> {{keyWords}}
+
+<button (click)="setkeyWords()">改变keyWords值</button>
+
+
+
+
+
