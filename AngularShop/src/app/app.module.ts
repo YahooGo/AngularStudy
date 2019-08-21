@@ -11,21 +11,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // 路由module
 import { AppRoutingModule } from './app-routing.module';
+/**
+ *  form 模块
+ */
+import {FormsModule} from '@angular/forms';
 // 根组件
 import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
-/**
- *  form 模块
- */
-  import {FormsModule} from '@angular/forms';
+import { FormComponent } from './components/form/form.component';
+import { SearchComponent } from './components/search/search.component';
 
 /**
  * @ngModule装饰器 接受一个元数据，告诉angular如何启动应用
  */
 @NgModule({
   declarations: [ /* 配置当前项目运行的组件 */
-    AppComponent, NewsComponent, HomeComponent
+    AppComponent, NewsComponent, HomeComponent, FormComponent, SearchComponent
   ],
   imports: [ /* 配置当前模块依赖其他模块 */ 
     BrowserModule,

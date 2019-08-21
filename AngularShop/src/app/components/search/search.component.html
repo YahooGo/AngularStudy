@@ -1,0 +1,8 @@
+<p>search works!</p>
+<input type="text" [(ngModel)]="pageControl.searchText" (keydown)="search($event)">
+
+<hr>
+
+<ul>
+    <li *ngFor="let item of pageControl.historyLists">{{item}}</li>
+</ul>
