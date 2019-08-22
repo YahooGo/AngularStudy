@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  public peopleInfo:any = {
+  public peopleInfo: any = {
     username: '',
     sex: '1',
     citys: ['北京', '上海', '大连'],

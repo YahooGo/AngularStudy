@@ -25,9 +25,14 @@ export class HomeComponent implements OnInit {
     }
   ];
   public flag: boolean = true;
+  /*
+   * 1: 已经支付
+   * 2：支付且确认订单
+   * 3：表示发货
+   * 4：已经收货
+   * */
 
-  public orderStatus: number = 1; /** 1: 已经支付， 2：支付且确认订单 3：表示发货 4：已经收货*/
-
+  public orderStatus: number = 1;
   public today: Date = new Date();
 
   constructor() { }

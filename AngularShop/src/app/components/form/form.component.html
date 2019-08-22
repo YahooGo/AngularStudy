@@ -1,7 +1,7 @@
 <p>form works!</p>
 <h2>人员登录系统</h2>
 <div class="people_list">
-    <ul >
+    <ul>
         <li>
             姓名：<input type="text" [(ngModel)]="peopleInfo.username" class="form_input">
         </li>
@@ -10,14 +10,14 @@
 
 
             <input type="radio" value="1" name="sex" id="sex1" [(ngModel)]="peopleInfo.sex">
-            <label for="sex1">男</label>  
+            <label for="sex1">男</label>
             <input type="radio" value="2" name="sex" id="sex2" [(ngModel)]="peopleInfo.sex">
-            <label for="sex2">女</label> 
+            <label for="sex2">女</label>
         </li>
         <li>
             城市:
             <select name="" id="" [(ngModel)]="peopleInfo.city">
-                <option  *ngFor="let city of peopleInfo.citys" [value]="city">{{city}}</option>
+                <option *ngFor="let city of peopleInfo.citys" [value]="city">{{city}}</option>
             </select>
         </li>
         <li>
@@ -26,7 +26,7 @@
                 <!-- <input type="checkbox" [id]="'check'+key" [(ngModel)]="item.checked"> -->
                 <input type="checkbox" [id]="'check'+key" [(ngModel)]="item.checked">
                 <label [for]="'check'+key">{{item.title}}</label>
-            
+
             </span>
         </li>
     </ul>
@@ -39,13 +39,3 @@
     </pre>
 
 </div>
-
-
-
-
-
-
-
-
-
-

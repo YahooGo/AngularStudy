@@ -19,21 +19,21 @@
 </div>
 <h1>条件判断</h1>
 <span [ngSwitch]="orderStatus">
-<p *ngSwitchCase="1">
-    表示已经支付
-</p>
-<p *ngSwitchCase="2">
-    支付并确认订单
-</p>
-<p *ngSwitchCase="3">
-    表示已经发货
-</p>
-<p *ngSwitchCase="4">
-    表示已经收货
-</p>
-<p *ngSwitchDefault>
-    表示已经发货
-</p>
+    <p *ngSwitchCase="1">
+        表示已经支付
+    </p>
+    <p *ngSwitchCase="2">
+        支付并确认订单
+    </p>
+    <p *ngSwitchCase="3">
+        表示已经发货
+    </p>
+    <p *ngSwitchCase="4">
+        表示已经收货
+    </p>
+    <p *ngSwitchDefault>
+        表示已经发货
+    </p>
 </span>
 
 <h1>属性[ngClass],[ngStyle]</h1>
@@ -63,8 +63,3 @@
 <input type="text" [(ngModel)]="keyWords"> {{keyWords}}
 
 <button (click)="setkeyWords()">改变keyWords值</button>
-
-
-
-
-
