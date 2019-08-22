@@ -22,10 +22,13 @@ export class SearchComponent implements OnInit {
     if (event.keyCode === 13 && event.key === `Enter`) {
       console.log('search:', this.pageControl.searchText);
       if (this.pageControl.historyLists.indexOf(this.pageControl.searchText) === -1) {
-        this.pageControl.historyLists.push(this.pageControl.searchText);
+        // this.pageControl.historyLists.push(this.pageControl.searchText);
+        this.pageControl.historyLists.push({
+          title: this.pageControl.searchText,
+          status: 0,
+        });
       }
     }
-
   }
 
 }
