@@ -26,13 +26,15 @@ import { SearchComponent } from './components/search/search.component';
  * 引入并且声明服务
  */
 import { StorageService } from './services/storage.service';
+import { HeaderComponent } from './components/header/header.component';
+import { TransitionComponent } from './components/transition/transition.component';
 
 /**
  * @ngModule装饰器 接受一个元数据，告诉angular如何启动应用
  */
 @NgModule({
   declarations: [ /* 配置当前项目运行的组件 */
-    AppComponent, NewsComponent, HomeComponent, FormComponent, SearchComponent
+    AppComponent, NewsComponent, HomeComponent, FormComponent, SearchComponent, HeaderComponent, TransitionComponent
   ],
   imports: [ /* 配置当前模块依赖其他模块 */
     BrowserModule,

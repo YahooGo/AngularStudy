@@ -15,6 +15,9 @@
         {{list}}</li>
 </ol>
 
-
-
-
+<!-- 操作DOM -->
+<div #myBox>
+    我是一个Dom节点
+</div>
+<button (click)="btnClick()">父组件点击触发子组件点击事件</button>
+<app-header #header></app-header>
