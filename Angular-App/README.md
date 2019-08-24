@@ -1,5 +1,9 @@
 # AngularApp
 
+## 超级给力的项目结构架构，以模块为中心建立整个项目
+> 模块构成 ： 组件，服务，路由，模块，指令等，根组件
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
