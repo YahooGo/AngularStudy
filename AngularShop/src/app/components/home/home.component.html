@@ -1,4 +1,10 @@
 <p>home works!</p>
+
+<app-header [title]="childTitle" [msg]="msg" [run]="run" (backdata)="getChildData($event)"></app-header>
+<button (click)="run()">父组件run count2++</button>
+<span>父组件count2</span> {{count2}}
+<br>
+<hr>
 <h1>引入图片</h1>
 <img src="assets/images/index.png" alt="" style="width: 300px;">
 <img [src]="imgUrl" alt="">

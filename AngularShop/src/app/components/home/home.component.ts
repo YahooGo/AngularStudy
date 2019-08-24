@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public childTitle: string = '父组件传入数据';
+
+  public msg: string = '父组件传入数据2333';
+
+  public count2 = 0;
+
   public title: string = `初始title`;
 
   public keyWords: string = null;
@@ -41,7 +47,8 @@ export class HomeComponent implements OnInit {
   }
 
   run() {
-    console.log('执行方法');
+    console.log('执行方法父组件');
+    this.count2++;
   }
 
   getData() {
@@ -57,5 +64,10 @@ export class HomeComponent implements OnInit {
 
   setkeyWords() {
     this.keyWords = `asdasds`;
+  }
+
+  getChildData(data): void {
+    console.log('子组件广播的数据:', data);
+    // console.log('22222');
   }
 }

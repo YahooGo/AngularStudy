@@ -1,3 +1,9 @@
 <button (click)="run()">子组件点击事件</button>
 <p>header works!</p>
 <span>{{count}}</span>
+
+<p>{{title}}</p>
+<p>{{msg2!}}</p>
+
+<button (click)="getParentRun()">子组件中run父组件run运行</button>
+<button (click)="backDataToParent()">广播数据到父组件</button>
