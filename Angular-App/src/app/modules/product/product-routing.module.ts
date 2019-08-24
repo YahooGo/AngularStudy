@@ -11,7 +11,8 @@ const routes: Routes = [
     path: '', component: ProductComponent,
     children: [
       { path: 'cart', component: CartComponent },
-      { path: 'pcontent', component: PcontentComponent }
+      { path: 'pcontent', component: PcontentComponent },
+      { path: '**', redirectTo: 'cart' }
     ]
   },
   {
