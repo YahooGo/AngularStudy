@@ -1,10 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<app-news></app-news>
+<!-- <app-news></app-news> -->
 <!-- <app-home></app-home> -->
 <!-- <app-form></app-form> -->
 <!-- <app-search></app-search> -->
 <!-- <app-news></app-news> -->
 
 <!-- <app-transition></app-transition> -->
-<!-- <router-outlet></router-outlet> -->
+
+<!-- 路由跳转 -->
+<!-- routerLinkActive 选中挂载active 的class类 -->
+<!-- queryParams get传参 -->
+<header>
+    <a [routerLink]="[ '/home' ]" routerLinkActive="active" [queryParams]="{aid: 1,name: 'zhangsan'}">首页</a>
+    <!-- 动态路由 -->
+    <a [routerLink]="[ '/news/', 1]" routerLinkActive="active">新闻</a>
+
+    <a [routerLink]="[ '/form' ]" routerLinkActive="active">表单</a>
+
+</header>
+
+
+<router-outlet></router-outlet>

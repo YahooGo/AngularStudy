@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -27,13 +28,26 @@ export class FormComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   handleSearch() {
     console.log(this.peopleInfo.username);
+  }
+
+  goHome() {
+    // 普通路由
+    this.router.navigate(['/news/']);
+    // home 动态路由跳转
+    this.router.navigate(['/news/', '123']);
+    // get路由跳转
+    const navigationExtras: NavigationExtras = {
+      queryParams: { session_id: `123`, fragment: 'author' },
+
+    };
+    this.router.navigate(['/home/'], navigationExtras);
   }
 
 }

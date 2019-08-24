@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -67,7 +68,8 @@ export class NewsComponent implements OnInit, AfterViewInit {
   @ViewChild(HeaderComponent, { static: true }) myHeader2: HeaderComponent;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -76,6 +78,12 @@ export class NewsComponent implements OnInit, AfterViewInit {
 
     // 获取值、改变值，this指向当前类。
 
+    /**
+     * 动态路由 通过params获取url参数
+     */
+    this.route.params.subscribe(data => {
+      console.log(data);
+    });
   }
   /**
    * 子组件创建完毕后调用函数，首次初始化

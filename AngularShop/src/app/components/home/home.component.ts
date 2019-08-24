@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -41,9 +42,16 @@ export class HomeComponent implements OnInit {
   public orderStatus: number = 1;
   public today: Date = new Date();
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    /**
+     * 接受get模式路由传参 通过ActivatedRoute实例获取
+     */
+    console.log(this.route.queryParams);
+    this.route.queryParams.subscribe(data => {
+      console.log(data);
+    });
   }
 
   run() {
