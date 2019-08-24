@@ -15,6 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
  *  form 模块
  */
 import { FormsModule } from '@angular/forms';
+/**
+ * 引入http服务模块
+ */
+import { HttpClientModule } from '@angular/common/http';
 // 根组件
 import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
@@ -40,6 +44,7 @@ import { TransitionComponent } from './components/transition/transition.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
     StorageService,

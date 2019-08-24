@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -65,7 +66,9 @@ export class NewsComponent implements OnInit, AfterViewInit {
    */
   @ViewChild(HeaderComponent, { static: true }) myHeader2: HeaderComponent;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   ngOnInit() {
     // 赋值初始化数据
@@ -83,15 +86,29 @@ export class NewsComponent implements OnInit, AfterViewInit {
     this.myBox.nativeElement.style.height = `100px`;
     this.myBox.nativeElement.style.background = `red`;
     this.myBox.nativeElement.innerHTML = `更改后的dom内容`;
-
-    // 调用子组件方法
-    this.myHeader.run();
   }
 
   btnClick(): void {
+    // 调用子组件方法
     // this.myHeader.run();
     // 通过直接引用子组件实例调用实例方法
     this.myHeader2.run();
+  }
+
+  getData() {
+    const url = `http://a.itying.com/api/productlist`;
+    this.http.get(url)
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log(err);
+        },
+        () => {
+          console.log('完成');
+        }
+      );
   }
 
 }
