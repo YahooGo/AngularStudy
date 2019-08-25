@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+/**
+ * [共享模块] 用于加载共享资源，多个组件公用
+ * 服务，依赖，等
+ */
+
 // 引入form模块
 import { FormsModule } from '@angular/forms';
 // 引入Material依赖于组件
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 /**
  * 共享模块
@@ -17,16 +22,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
     FormsModule,
-    MatCheckboxModule,
+
   ],
   exports: [
     CommonModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
     FormsModule,
-    MatCheckboxModule,
   ]
 })
 export class SharedModule { }
