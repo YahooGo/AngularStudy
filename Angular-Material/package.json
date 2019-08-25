@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve --open",
     "buildProd": "ng build --prod",
+    "json": "json-server --watch ./src/mock/db.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,6 +21,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "json-server": "^0.15.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

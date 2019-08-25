@@ -19,6 +19,14 @@ Angular8 + Material UI + 动画 + Angular核心概念 + Rxjs响应式编程
 `ng build` 开发环境编译
 `ng build --test` 测试环境编译
 
+## mock 数据
+> 使用json-server 工具
+
+安装： 安装指令`yarn add json-server`
+创建： 创建db.json文件用于定义mock数据
+配置： 配置package.json 命令内部启动json-server 
+运行： 运行指令`json-server --watch db.json`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
