@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
+    "start_both": "yarn start & yarn json",
     "buildProd": "ng build --prod",
     "json": "json-server --watch ./src/mock/db.json",
     "build": "ng build",
