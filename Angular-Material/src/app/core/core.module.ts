@@ -1,5 +1,8 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
 /**
  * @SkipSelf()装饰器
  * 用于构造函数参数的参数修饰符，
@@ -16,9 +19,18 @@ import { CommonModule } from '@angular/common';
  */
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
+  ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
   ]
 })
 /**

@@ -104,12 +104,21 @@
     "@angular-devkit/core" "8.2.2"
     rxjs "6.4.0"
 
-"@angular/animations@~8.2.0":
+"@angular/animations@^8.2.3":
   version "8.2.3"
   resolved "http://r.cnpmjs.org/@angular/animations/download/@angular/animations-8.2.3.tgz#1b6e9514bfb0c6ef58fa1ced2493677178f9bbca"
   integrity sha1-G26VFL+wxu9Y+hztJJNncXj5u8o=
   dependencies:
     tslib "^1.9.0"
+
+"@angular/cdk@^8.1.3":
+  version "8.1.3"
+  resolved "http://r.cnpmjs.org/@angular/cdk/download/@angular/cdk-8.1.3.tgz#c791b4ae950bd015c4f618204e4f974e2dd64254"
+  integrity sha1-x5G0rpUL0BXE9hggTk+XTi3WQlQ=
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
 
 "@angular/cli@~8.2.0":
   version "8.2.2"
@@ -183,6 +192,13 @@
   version "8.2.3"
   resolved "http://r.cnpmjs.org/@angular/language-service/download/@angular/language-service-8.2.3.tgz#ee4b59294615722f93a96f36dacc7109f69c09d4"
   integrity sha1-7ktZKUYVci+TqW822sxxCfacCdQ=
+
+"@angular/material@^8.1.3":
+  version "8.1.3"
+  resolved "http://r.cnpmjs.org/@angular/material/download/@angular/material-8.1.3.tgz#1e65a6e02196348413cb073da3255771116c7618"
+  integrity sha1-HmWm4CGWNIQTywc9oyVXcRFsdhg=
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~8.2.0":
   version "8.2.3"
@@ -5248,6 +5264,11 @@ parse5@4.0.0:
   resolved "http://r.cnpmjs.org/parse5/download/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha1-bXhlbj2o14tOwLkG98CO8d/j9gg=
 
+parse5@^5.0.0:
+  version "5.1.0"
+  resolved "http://r.cnpmjs.org/parse5/download/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
+  integrity sha1-xZNByXI/QUxFKXVWTHwApo1YrNI=
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "http://r.cnpmjs.org/parseqs/download/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -6974,7 +6995,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@1.10.0, tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@1.10.0, tslib@^1.10.0, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "http://r.cnpmjs.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
