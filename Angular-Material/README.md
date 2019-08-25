@@ -8,7 +8,7 @@
 
 
 > 使用技术
-Angular8 + Material UI + 动画 + Angular核心概念 + Rxjs响应式编程
+Angular8 + Ng-zorro UI + 动画 + Angular核心概念 + Rxjs响应式编程
 + angular 中的响应式编程 + Redux + 自动化测试
 
 > 具体内容
