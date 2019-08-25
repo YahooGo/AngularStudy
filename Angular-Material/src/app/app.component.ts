@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Material';
 
-  public shouldRun = true;
+  public opened = false;
+
 }
