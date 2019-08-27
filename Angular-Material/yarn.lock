@@ -104,6 +104,11 @@
     "@angular-devkit/core" "8.2.2"
     rxjs "6.4.0"
 
+"@angular/animation@^4.0.0-beta.8":
+  version "4.0.0-beta.8"
+  resolved "http://r.cnpmjs.org/@angular/animation/download/@angular/animation-4.0.0-beta.8.tgz#9f61b4ee84ff4e8f48abb0eb49fff02bdedccc2e"
+  integrity sha1-n2G07oT/To9Iq7DrSf/wK97czC4=
+
 "@angular/animations@^8.2.3":
   version "8.2.3"
   resolved "http://r.cnpmjs.org/@angular/animations/download/@angular/animations-8.2.3.tgz#1b6e9514bfb0c6ef58fa1ced2493677178f9bbca"

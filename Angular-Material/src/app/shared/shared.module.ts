@@ -8,9 +8,16 @@ import { CommonModule } from '@angular/common';
 
 // 引入form模块
 import { FormsModule } from '@angular/forms';
-// 引入Material依赖于组件
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+// 引入Material组件module
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 /**
  * 共享模块
@@ -21,14 +28,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     FormsModule,
-
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatInputModule,
   ],
   exports: [
     CommonModule,
-    BrowserAnimationsModule,
     FormsModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatInputModule,
   ]
 })
 export class SharedModule { }

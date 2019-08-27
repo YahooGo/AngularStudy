@@ -1,21 +1,20 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /**
  * [核心模块]用于加载一次性资源，不重复加载
  * 全局组件，UI组件库资源等
  */
 
-// 引入Material组件module
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 // 引入共享模块
+import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material';
 
 /**
  * @SkipSelf()装饰器
@@ -35,19 +34,15 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-    MainComponent,
     FooterComponent,
   ],
   imports: [
-    CommonModule,
-    MatSidenavModule,
-    MatCheckboxModule,
-    MatToolbarModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    SharedModule,
   ],
   exports: [
-    MatSidenavModule,
     HeaderComponent,
-    MainComponent,
     FooterComponent,
   ]
 })
@@ -55,9 +50,21 @@ import { FooterComponent } from './components/footer/footer.component';
  * angular 依赖注入核心概念不明确 TODO: 暂时未知
  */
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parent: CoreModule) {
+  constructor(
+    @Optional() @SkipSelf() parent: CoreModule,
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer
+  ) {
     if (parent) {
       throw new Error('核心模块已经存在，不能再次加载！');
     }
+    // 将SVG注册成图标
+    iconRegistry.addSvgIcon(
+      'menu-svg',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu.svg'));
+
+
+
+
   }
 }

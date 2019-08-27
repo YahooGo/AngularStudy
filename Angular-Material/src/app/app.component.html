@@ -12,7 +12,9 @@
         <app-header (sidebartoggle)="sidenav.toggle()"></app-header>
       </header>
       <main>
-        <app-main></app-main>
+
+        <router-outlet></router-outlet>
+
       </main>
       <footer>
         <app-footer></app-footer>
@@ -22,6 +24,3 @@
 
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-<router-outlet></router-outlet>

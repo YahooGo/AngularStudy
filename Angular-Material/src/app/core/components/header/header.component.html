@@ -1,5 +1,14 @@
 <!-- <p>header works!</p> -->
 <mat-toolbar color="primary">
     <span>header works!</span>
-    <button mat-button (click)="sidenavToggle()">菜单</button>
+
+
+    <button mat-icon-button (click)="sidenavToggle()">
+        <mat-icon>home</mat-icon>
+    </button>
+
+    <button mat-icon-button (click)="sidenavToggle()">
+        <mat-icon svgIcon="menu-svg" color="#fff"></mat-icon>
+    </button>
+
 </mat-toolbar>
