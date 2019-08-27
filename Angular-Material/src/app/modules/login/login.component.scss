@@ -1,7 +1,33 @@
-.my-card {
-    width: 600px;
-    img: {
-        height: 100px;
-        width: 100px;
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+    .my-card {
+        flex: 1;
+        margin: 5px 0px;
+        width: 300px;
+        
+        img: {
+            height: 100px;
+            width: 100px;
+        }
+        .text-right {
+            text-align: right;
+        }
+
+        .full-width {
+            min-width: 100px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .btn-position {
+            text-align: right;
+        }
     }
+
+
+
 }

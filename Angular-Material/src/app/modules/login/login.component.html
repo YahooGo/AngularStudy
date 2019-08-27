@@ -1,21 +1,42 @@
-<mat-card class="my-card">
-    <mat-card-header>
-        <div mat-card-avatar class="my-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
+<form>
 
-    <mat-card-content>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-form-field>
-            <input matInput type="text" placeholder="请输入账号">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput type="password" placeholder="请输入密码">
-        </mat-form-field>
-    </mat-card-content>
-    <mat-card-actions>
-        <p><span>还未注册？</span><button mat-button>注册</button></p>
-        <p><span>忘记了密码？</span><button mat-button>忘记密码</button></p>
-    </mat-card-actions>
-</mat-card>
+    <mat-card class="my-card">
+        <mat-card-header>
+            <div mat-card-avatar class="my-header-image"></div>
+            <mat-card-title>登录</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-form-field class="full-width">
+                <input matInput type="text" placeholder="请输入账号">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="请输入密码">
+            </mat-form-field>
+            <div class="btn-position">
+                <button mat-button type="button">登录</button>
+            </div>
+        </mat-card-content>
+        <mat-card-actions class="text-right">
+            <p><span>还未注册？</span><button mat-button>注册</button></p>
+            <p><span>忘记了密码？</span><button mat-button>忘记密码</button></p>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="my-card">
+        <mat-card-header>
+            <div mat-card-avatar class="my-header-image"></div>
+            <mat-card-title>每日佳句</mat-card-title>
+            <mat-card-subtitle>每天都在进步</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <img mat-card-image
+                src="https://c-ssl.duitang.com/uploads/item/201710/29/20171029104122_ivVNJ.thumb.700_0.jpeg" alt="">
+        </mat-card-content>
+        <mat-card-actions>
+
+        </mat-card-actions>
+    </mat-card>
+</form>
