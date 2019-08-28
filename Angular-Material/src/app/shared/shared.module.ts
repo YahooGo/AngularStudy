@@ -18,6 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 
 /**
  * 共享模块
@@ -37,6 +39,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatCardModule,
     MatInputModule,
+    MatMenuModule,
+    MatListModule,
   ],
   exports: [
     CommonModule,
@@ -49,6 +53,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatCardModule,
     MatInputModule,
+    MatMenuModule,
+    MatListModule,
   ]
 })
 export class SharedModule { }

@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 /**
  * @SkipSelf()装饰器
@@ -35,6 +36,7 @@ import { MatIconRegistry } from '@angular/material';
   declarations: [
     HeaderComponent,
     FooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -44,6 +46,7 @@ import { MatIconRegistry } from '@angular/material';
   exports: [
     HeaderComponent,
     FooterComponent,
+    SidebarComponent,
   ]
 })
 /**
@@ -59,9 +62,12 @@ export class CoreModule {
       throw new Error('核心模块已经存在，不能再次加载！');
     }
     // 将SVG注册成图标
+    const imgDir = `assets`;
+    const sidebar = `${imgDir}/icons`;
+
     iconRegistry.addSvgIcon(
-      'menu-svg',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu.svg'));
+      'menusvg',
+      sanitizer.bypassSecurityTrustResourceUrl(`${sidebar}/menu.svg`));
 
 
 
