@@ -5,7 +5,16 @@
     left: 0;
     right: 0;
     background: #eee;
+
+    // &.myapp-dark-theme {
+    //   background: orange;
+    // }
   }
+
+  .sidebar-container.myapp-dark-theme {
+    background: orange;
+  }
+
 
   .mat-sidenav {
     width: 300px;
