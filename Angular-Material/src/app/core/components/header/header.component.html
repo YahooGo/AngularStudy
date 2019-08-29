@@ -1,14 +1,19 @@
 <!-- <p>header works!</p> -->
 <mat-toolbar color="primary">
-    <span>header works!</span>
+
 
 
     <button mat-icon-button (click)="sidenavToggle()">
         <mat-icon>home</mat-icon>
     </button>
+    <span>header works!</span>
 
-    <button mat-icon-button (click)="sidenavToggle()">
+    <span class="fill-remaining-space"></span>
+
+    <mat-slide-toggle (change)="handleChangeTheme($event)">绚丽模式</mat-slide-toggle>
+
+    <!-- <button mat-icon-button (click)="sidenavToggle()">
         <mat-icon svgIcon="menu-svg" color="#fff"></mat-icon>
-    </button>
+    </button> -->
 
 </mat-toolbar>

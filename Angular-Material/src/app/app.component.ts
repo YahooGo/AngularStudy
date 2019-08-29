@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Material';
+  public darkStatus = false;
 
+  public changeTheme(dark) {
+    console.log(dark.checked);
+    this.darkStatus = dark.checked;
+  }
 }

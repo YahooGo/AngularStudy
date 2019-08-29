@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<mat-sidenav-container class="sidebar-container">
+<mat-sidenav-container class="sidebar-container" [class.myapp-dark-theme]="darkStatus">
   <mat-sidenav #sidenav mode="Over" position="end">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
@@ -9,7 +9,7 @@
 
     <div class="site">
       <header>
-        <app-header (sidebartoggle)="sidenav.toggle()"></app-header>
+        <app-header (sidebartoggle)="sidenav.toggle()" (changeTheme)="changeTheme($event)"></app-header>
       </header>
       <main>
 

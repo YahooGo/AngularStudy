@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() sidebartoggle: EventEmitter<void> = new EventEmitter();
-
+  @Output() changeTheme: EventEmitter<boolean> = new EventEmitter();
 
   constructor() { }
 
@@ -17,5 +17,10 @@ export class HeaderComponent implements OnInit {
 
   public sidenavToggle(): void {
     this.sidebartoggle.emit();
+  }
+
+  public handleChangeTheme(checkDark: boolean) {
+    console.log(checkDark);
+    this.changeTheme.emit(checkDark);
   }
 }
