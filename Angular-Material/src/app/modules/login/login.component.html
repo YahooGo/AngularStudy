@@ -18,13 +18,13 @@
             </div>
         </mat-card-content>
         <mat-card-actions class="text-right">
-            <p><span>还未注册？</span><button mat-button>注册</button></p>
+            <p><span>还未注册？</span><a [routerLink]="['/register']">注册</a></p>
             <p><span>忘记了密码？</span><button mat-button>忘记密码</button></p>
         </mat-card-actions>
     </mat-card>
 
 
-    <mat-card class="my-card">
+    <mat-card class=" my-card">
         <mat-card-header>
             <div mat-card-avatar class="my-header-image"></div>
             <mat-card-title>每日佳句</mat-card-title>

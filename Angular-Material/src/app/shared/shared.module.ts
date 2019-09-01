@@ -21,7 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 /**
  * 共享模块
  * [主要作用]: 导入和导出模块组件服务等
@@ -43,6 +43,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatMenuModule,
     MatListModule,
     MatSlideToggleModule,
+    MatGridListModule,
   ],
   exports: [
     CommonModule,
@@ -58,6 +59,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatMenuModule,
     MatListModule,
     MatSlideToggleModule,
+    MatGridListModule,
   ]
 })
 export class SharedModule { }
